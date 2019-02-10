@@ -6,8 +6,7 @@
 //  Copyright © 2019 AYOH. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 struct TweetManager {
    let gameID:String
@@ -29,7 +28,7 @@ struct TweetManager {
       for i in 1...5 {
          var date = Date()
          date.addTimeInterval(TimeInterval(integerLiteral: Int64(i)))
-         let tweet = Tweet.init(handle: "MattyAyOh", body: "TestTweet \(i)", timestamp: date, url: URL(string: "www.twitter.com")!)
+         let tweet = Tweet.init(handle: "MattyAyOh", body: "TestTweet \(i)", timestamp: date, url: URL(string: "www.twitter.com")!, avatar:UIImage())
          
          newTweets.append(tweet)
       }

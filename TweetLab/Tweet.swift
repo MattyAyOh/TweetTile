@@ -6,13 +6,14 @@
 //  Copyright © 2019 AYOH. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Tweet: Comparable {
    let handle: String
    let body: String
    let timestamp: Date
    let url: URL
+   let avatar: UIImage
    
    static func < (lhs: Tweet, rhs: Tweet) -> Bool {
       return lhs.timestamp < rhs.timestamp
