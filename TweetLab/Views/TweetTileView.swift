@@ -25,21 +25,24 @@ class TweetTileView: UIView {
    init(frame: CGRect, tweet:Tweet)
    {
       self.backingTweet = tweet
-      
-//      self.avatarImageView = UIImageView(frame: frame.insetBy(dx: 3.0, dy: 3.0))
-//      self.avatarImageView.image = tweet.avatar
-
-//      self.handleLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.handle)
-//
-//      self.bodyLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.body)
-
-//      let formatter = DateFormatter()
-//      formatter.dateFormat = "HH:mm, MMM dd"
-//      let dateString = formatter.string(from: tweet.timestamp)
-//      self.timestampLabel = TweetTileView.createLabel(inFrame: frame, withText: dateString)
-//
       super.init(frame: frame)
-      commonInit(forFrame: frame)
+
+      Bundle.main.loadNibNamed("TweetTileView", owner: self, options: nil)
+      self.addSubview(contentView)
+      contentView.frame = frame
+      contentView.bounds = frame.insetBy(dx: 10.0, dy: 10.0)
+      contentView.translatesAutoresizingMaskIntoConstraints = true
+      contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
+      contentView.layer.cornerRadius = 10.0
+      
+      self.avatarImageView.image = tweet.avatar
+      self.handleLabel.text = tweet.handle
+      self.bodyLabel.text = tweet.body
+      
+      let formatter = DateFormatter()
+      formatter.dateFormat = "HH:mm, MMM dd"
+      let dateString = formatter.string(from: tweet.timestamp)
+      self.timestampLabel.text = dateString
       
       let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.tileTapped (_:)))
       self.addGestureRecognizer(gesture)
@@ -49,16 +52,6 @@ class TweetTileView: UIView {
       fatalError("init(coder:) has not been implemented")
    }
    
-   func commonInit(forFrame frame:CGRect) {
-      Bundle.main.loadNibNamed("TweetTileView", owner: self, options: nil)
-      self.addSubview(contentView)
-      contentView.frame = frame
-      contentView.bounds = frame.insetBy(dx: 10.0, dy: 10.0)
-      contentView.translatesAutoresizingMaskIntoConstraints = true
-      contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
-      contentView.layer.cornerRadius = 10.0
-   }
-
    fileprivate class func createLabel(inFrame frame:CGRect, withText text:String) -> UILabel {
       let label = UILabel(frame: frame.insetBy(dx: 5.0, dy: 5.0))
       label.text = text
