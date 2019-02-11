@@ -18,6 +18,8 @@
 		3ADC2CDD2210251D00382EDB /* Notification+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CDC2210251D00382EDB /* Notification+.swift */; };
 		3ADC2CE622102CBF00382EDB /* TweetTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CE522102CBF00382EDB /* TweetTileView.swift */; };
 		3ADC2CE822102E2E00382EDB /* TweetTileScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CE722102E2E00382EDB /* TweetTileScrollView.swift */; };
+		3ADC2CEA22113D5000382EDB /* TweetTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC2CE922113D5000382EDB /* TweetTileView.xib */; };
+		3ADC2CEC221145B500382EDB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CEB221145B500382EDB /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		3ADC2CDC2210251D00382EDB /* Notification+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+.swift"; sourceTree = "<group>"; };
 		3ADC2CE522102CBF00382EDB /* TweetTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetTileView.swift; path = TweetLab/Views/TweetTileView.swift; sourceTree = SOURCE_ROOT; };
 		3ADC2CE722102E2E00382EDB /* TweetTileScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetTileScrollView.swift; path = TweetLab/Views/TweetTileScrollView.swift; sourceTree = SOURCE_ROOT; };
+		3ADC2CE922113D5000382EDB /* TweetTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TweetTileView.xib; path = TweetLab/Views/TweetTileView.xib; sourceTree = SOURCE_ROOT; };
+		3ADC2CEB221145B500382EDB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				3ADC0EE3220B9F0E00954A91 /* TweetManager.swift */,
 				3ADC0EE5220BA17500954A91 /* Tweet.swift */,
 				3ADC2CDC2210251D00382EDB /* Notification+.swift */,
+				3ADC2CEB221145B500382EDB /* UIView+.swift */,
 			);
 			path = TweetLab;
 			sourceTree = "<group>";
@@ -113,11 +118,11 @@
 		3ADC2CE422102BAC00382EDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3ADC2CE522102CBF00382EDB /* TweetTileView.swift */,
 				3ADC2CE722102E2E00382EDB /* TweetTileScrollView.swift */,
+				3ADC2CE522102CBF00382EDB /* TweetTileView.swift */,
+				3ADC2CE922113D5000382EDB /* TweetTileView.xib */,
 			);
-			name = Views;
-			path = "New Group";
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADC2CEA22113D5000382EDB /* TweetTileView.xib in Resources */,
 				3ADC0E9C220B959900954A91 /* LaunchScreen.storyboard in Resources */,
 				3ADC0E99220B959900954A91 /* Assets.xcassets in Resources */,
 				3ADC0E97220B959700954A91 /* Main.storyboard in Resources */,
@@ -225,6 +231,7 @@
 				3ADC0E94220B959700954A91 /* ViewController.swift in Sources */,
 				3ADC0E92220B959700954A91 /* AppDelegate.swift in Sources */,
 				3ADC0EE4220B9F0E00954A91 /* TweetManager.swift in Sources */,
+				3ADC2CEC221145B500382EDB /* UIView+.swift in Sources */,
 				3ADC2CE822102E2E00382EDB /* TweetTileScrollView.swift in Sources */,
 				3ADC2CDD2210251D00382EDB /* Notification+.swift in Sources */,
 				3ADC0EE6220BA17500954A91 /* Tweet.swift in Sources */,

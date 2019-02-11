@@ -10,11 +10,13 @@ import UIKit
 
 class TweetTileView: UIView {
    let backingTweet: Tweet
+   
+   @IBOutlet var contentView: UIView!
 
-   let avatarImageView: UIImageView
-   let handleLabel: UILabel
-   let bodyLabel: UILabel
-   let timestampLabel: UILabel
+   @IBOutlet var avatarImageView: UIImageView!
+   @IBOutlet var handleLabel: UILabel!
+   @IBOutlet var bodyLabel: UITextView!
+   @IBOutlet var timestampLabel: UILabel!
    
    override convenience init(frame: CGRect) {
       fatalError("need to init from custom frame init")
@@ -24,32 +26,38 @@ class TweetTileView: UIView {
    {
       self.backingTweet = tweet
       
-      self.avatarImageView = UIImageView(frame: frame.insetBy(dx: 3.0, dy: 3.0))
-      self.avatarImageView.image = tweet.avatar
+//      self.avatarImageView = UIImageView(frame: frame.insetBy(dx: 3.0, dy: 3.0))
+//      self.avatarImageView.image = tweet.avatar
 
-      self.handleLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.handle)
-   
-      self.bodyLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.body)
+//      self.handleLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.handle)
+//
+//      self.bodyLabel = TweetTileView.createLabel(inFrame: frame, withText: tweet.body)
 
-      let formatter = DateFormatter()
-      formatter.dateFormat = "HH:mm, MMM dd"
-      let dateString = formatter.string(from: tweet.timestamp)
-      self.timestampLabel = TweetTileView.createLabel(inFrame: frame, withText: dateString)
-      
+//      let formatter = DateFormatter()
+//      formatter.dateFormat = "HH:mm, MMM dd"
+//      let dateString = formatter.string(from: tweet.timestamp)
+//      self.timestampLabel = TweetTileView.createLabel(inFrame: frame, withText: dateString)
+//
       super.init(frame: frame)
-      self.addSubview(self.avatarImageView)
-      self.addSubview(self.handleLabel)
-      self.addSubview(self.bodyLabel)
-      self.addSubview(self.timestampLabel)
+      commonInit(forFrame: frame)
       
       let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.tileTapped (_:)))
       self.addGestureRecognizer(gesture)
       self.bounds = self.frame.insetBy(dx: 1.0, dy: 1.0)
       self.layer.cornerRadius = 5.0
+      self.backgroundColor = UIColor.red
    }
    
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
+   }
+   
+   func commonInit(forFrame frame:CGRect) {
+      Bundle.main.loadNibNamed("TweetTileView", owner: self, options: nil)
+      self.addSubview(contentView)
+      contentView.frame = frame
+      contentView.translatesAutoresizingMaskIntoConstraints = true
+      contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
    }
 
    fileprivate class func createLabel(inFrame frame:CGRect, withText text:String) -> UILabel {
