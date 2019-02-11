@@ -45,12 +45,11 @@
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="When you're Steph Curry and shoot so many 3's 🔥🔥🔥 you forget how to dunk!" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjT-lG-kHW">
                     <rect key="frame" x="30" y="57" width="340" height="126.5"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.95699840784072876" green="0.82144743204116821" blue="0.095242969691753387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fxS-Pu-G8j" secondAttribute="bottom" constant="25" id="8aa-Qv-AdF"/>
                 <constraint firstItem="cd7-Zl-kNx" firstAttribute="leading" secondItem="8hE-oi-SsN" secondAttribute="trailing" constant="8" id="CbO-xs-0Nc"/>

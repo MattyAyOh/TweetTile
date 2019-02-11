@@ -43,9 +43,6 @@ class TweetTileView: UIView {
       
       let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.tileTapped (_:)))
       self.addGestureRecognizer(gesture)
-      self.bounds = self.frame.insetBy(dx: 1.0, dy: 1.0)
-      self.layer.cornerRadius = 5.0
-      self.backgroundColor = UIColor.red
    }
    
    required init?(coder aDecoder: NSCoder) {
@@ -56,8 +53,10 @@ class TweetTileView: UIView {
       Bundle.main.loadNibNamed("TweetTileView", owner: self, options: nil)
       self.addSubview(contentView)
       contentView.frame = frame
+      contentView.bounds = frame.insetBy(dx: 10.0, dy: 10.0)
       contentView.translatesAutoresizingMaskIntoConstraints = true
       contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
+      contentView.layer.cornerRadius = 10.0
    }
 
    fileprivate class func createLabel(inFrame frame:CGRect, withText text:String) -> UILabel {
