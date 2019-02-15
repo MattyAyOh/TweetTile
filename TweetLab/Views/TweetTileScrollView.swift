@@ -21,6 +21,7 @@ class TweetTileScrollView: UIView {
       tileStack = UIStackView()
       super.init(coder: aDecoder)
       scrollView.frame = self.bounds
+      scrollView.isPagingEnabled = true
       tileStack.frame = self.bounds
       let scrollWidth = CGFloat(tweetManager.tweets.count) * scrollView.frame.width
       scrollView.contentSize = CGSize.init(width: scrollWidth, height: scrollView.frame.height)
