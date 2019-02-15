@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>998867231198-qp8jt8qv1n64kdhlrem63093k6mn6nio.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.998867231198-qp8jt8qv1n64kdhlrem63093k6mn6nio</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB2QULakFjQ1HjdgxXcbtzQ08rwkkmA_Bg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>998867231198</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ao.TweetLab</string>
+	<key>PROJECT_ID</key>
+	<string>tweettile</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tweettile.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:998867231198:ios:f5e780635c184720</string>
+	<key>DATABASE_URL</key>
+	<string>https://tweettile.firebaseio.com</string>
+</dict>
+</plist>
