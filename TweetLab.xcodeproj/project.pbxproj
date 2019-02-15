@@ -23,6 +23,8 @@
 		3ADC2CE822102E2E00382EDB /* TweetTileScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CE722102E2E00382EDB /* TweetTileScrollView.swift */; };
 		3ADC2CEA22113D5000382EDB /* TweetTileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC2CE922113D5000382EDB /* TweetTileView.xib */; };
 		3ADC2CEC221145B500382EDB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC2CEB221145B500382EDB /* UIView+.swift */; };
+		F371ED372765BA52AE723450 /* Pods_TweetLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54057A92E30B7E7C096556C7 /* Pods_TweetLab.framework */; };
+		FCC28A5A5F3800C346F6FA82 /* Pods_TweetLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E0EF05E8AAF892B2634503 /* Pods_TweetLabTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,12 @@
 		3ADC2CE722102E2E00382EDB /* TweetTileScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TweetTileScrollView.swift; path = TweetLab/Views/TweetTileScrollView.swift; sourceTree = SOURCE_ROOT; };
 		3ADC2CE922113D5000382EDB /* TweetTileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TweetTileView.xib; path = TweetLab/Views/TweetTileView.xib; sourceTree = SOURCE_ROOT; };
 		3ADC2CEB221145B500382EDB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		54057A92E30B7E7C096556C7 /* Pods_TweetLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E0EF05E8AAF892B2634503 /* Pods_TweetLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDDB9DBA19E84123977073D /* Pods-TweetLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetLabTests.debug.xcconfig"; path = "Target Support Files/Pods-TweetLabTests/Pods-TweetLabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B279BB6F02E6BA983CEE25FA /* Pods-TweetLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetLabTests.release.xcconfig"; path = "Target Support Files/Pods-TweetLabTests/Pods-TweetLabTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9A4AEFA7356FEA4D6A6FE81 /* Pods-TweetLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetLab.release.xcconfig"; path = "Target Support Files/Pods-TweetLab/Pods-TweetLab.release.xcconfig"; sourceTree = "<group>"; };
+		F1F3FF41546988D4E41DD470 /* Pods-TweetLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetLab.debug.xcconfig"; path = "Target Support Files/Pods-TweetLab/Pods-TweetLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F371ED372765BA52AE723450 /* Pods_TweetLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,18 +78,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC28A5A5F3800C346F6FA82 /* Pods_TweetLabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060352C3A63718267FAED7AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54057A92E30B7E7C096556C7 /* Pods_TweetLab.framework */,
+				72E0EF05E8AAF892B2634503 /* Pods_TweetLabTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3ADC0E85220B959700954A91 = {
 			isa = PBXGroup;
 			children = (
 				3ADC0E90220B959700954A91 /* TweetLab */,
 				3ADC0EA5220B959900954A91 /* TweetLabTests */,
 				3ADC0E8F220B959700954A91 /* Products */,
+				CC022BE6DCCCDC933961B9D0 /* Pods */,
+				060352C3A63718267FAED7AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +153,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CC022BE6DCCCDC933961B9D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1F3FF41546988D4E41DD470 /* Pods-TweetLab.debug.xcconfig */,
+				D9A4AEFA7356FEA4D6A6FE81 /* Pods-TweetLab.release.xcconfig */,
+				7CDDB9DBA19E84123977073D /* Pods-TweetLabTests.debug.xcconfig */,
+				B279BB6F02E6BA983CEE25FA /* Pods-TweetLabTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ADC0EAB220B959900954A91 /* Build configuration list for PBXNativeTarget "TweetLab" */;
 			buildPhases = (
+				AF737ECC3D4FFFC14C712BD5 /* [CP] Check Pods Manifest.lock */,
 				3ADC0E8A220B959700954A91 /* Sources */,
 				3ADC0E8B220B959700954A91 /* Frameworks */,
 				3ADC0E8C220B959700954A91 /* Resources */,
+				F5416EC59C02638A231A01A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ADC0EAE220B959900954A91 /* Build configuration list for PBXNativeTarget "TweetLabTests" */;
 			buildPhases = (
+				CA3A4E4D0DE444B219E730AF /* [CP] Check Pods Manifest.lock */,
 				3ADC0E9E220B959900954A91 /* Sources */,
 				3ADC0E9F220B959900954A91 /* Frameworks */,
 				3ADC0EA0220B959900954A91 /* Resources */,
@@ -230,6 +266,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF737ECC3D4FFFC14C712BD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TweetLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA3A4E4D0DE444B219E730AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TweetLabTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5416EC59C02638A231A01A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TweetLab/Pods-TweetLab-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetLab/Pods-TweetLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ADC0E8A220B959700954A91 /* Sources */ = {
@@ -404,6 +521,7 @@
 		};
 		3ADC0EAC220B959900954A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F3FF41546988D4E41DD470 /* Pods-TweetLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +544,7 @@
 		};
 		3ADC0EAD220B959900954A91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A4AEFA7356FEA4D6A6FE81 /* Pods-TweetLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +567,7 @@
 		};
 		3ADC0EAF220B959900954A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CDDB9DBA19E84123977073D /* Pods-TweetLabTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +589,7 @@
 		};
 		3ADC0EB0220B959900954A91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B279BB6F02E6BA983CEE25FA /* Pods-TweetLabTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
