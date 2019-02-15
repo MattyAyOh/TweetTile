@@ -25,9 +25,9 @@ struct TweetManager {
       
       var newTweets = [Tweet]()
       //TEMP FAKE TWEETS
-      for i in 1...5 {
+      for i in 1...9 {
          var date = Date()
-         date.addTimeInterval(TimeInterval(integerLiteral: Int64(i)))
+         date.addTimeInterval(TimeInterval(integerLiteral: Int64(-i*866)))
          var tweet = Tweet.init(handle: "MattyAyOh", body: "TestTweet \(i)", timestamp: date, url: URL(string: "www.twitter.com")!, avatar:UIImage.init(named: "twitter")!)
          
          if i == 1 {

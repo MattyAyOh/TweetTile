@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB13733221694BE00A204BE /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB13732221694BE00A204BE /* Date+TimeAgo.swift */; };
 		3ADC0E92220B959700954A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0E91220B959700954A91 /* AppDelegate.swift */; };
 		3ADC0E94220B959700954A91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0E93220B959700954A91 /* ViewController.swift */; };
 		3ADC0E97220B959700954A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC0E95220B959700954A91 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AB13732221694BE00A204BE /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		3ADC0E8E220B959700954A91 /* TweetLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADC0E91220B959700954A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADC0E93220B959700954A91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3ADC0EE5220BA17500954A91 /* Tweet.swift */,
 				3ADC2CDC2210251D00382EDB /* Notification+.swift */,
 				3ADC2CEB221145B500382EDB /* UIView+.swift */,
+				3AB13732221694BE00A204BE /* Date+TimeAgo.swift */,
 			);
 			path = TweetLab;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				3ADC0EE4220B9F0E00954A91 /* TweetManager.swift in Sources */,
 				3ADC2CEC221145B500382EDB /* UIView+.swift in Sources */,
 				3ADC2CE822102E2E00382EDB /* TweetTileScrollView.swift in Sources */,
+				3AB13733221694BE00A204BE /* Date+TimeAgo.swift in Sources */,
 				3ADC2CDD2210251D00382EDB /* Notification+.swift in Sources */,
 				3ADC0EE6220BA17500954A91 /* Tweet.swift in Sources */,
 			);

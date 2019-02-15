@@ -38,11 +38,7 @@ class TweetTileView: UIView {
       self.avatarImageView.image = tweet.avatar
       self.handleLabel.text = tweet.handle
       self.bodyLabel.text = tweet.body
-      
-      let formatter = DateFormatter()
-      formatter.dateFormat = "HH:mm, MMM dd"
-      let dateString = formatter.string(from: tweet.timestamp)
-      self.timestampLabel.text = dateString
+      self.timestampLabel.text = tweet.timestamp.timestampString
       
       let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.tileTapped (_:)))
       self.addGestureRecognizer(gesture)
