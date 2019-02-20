@@ -10,9 +10,6 @@ import UIKit
 import Firebase
 
 class TweetManager {
-   let gameID:String = ""
-   
-   let numTweetsToShow = 10
    var tweets = [Tweet]()
    
    init() {
@@ -28,7 +25,6 @@ class TweetManager {
    
    func reloadTweets() {
       NotificationCenter.default.post(name: .tweetsWillLoad, object: nil)
-      //kick off firebase request
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
          let db = Firestore.firestore()
          db.collection("tweets").getDocuments() { (querySnapshot, err) in
@@ -51,7 +47,8 @@ class TweetManager {
             let timestamp = document["timestamp"] as! Timestamp
             let date = timestamp.dateValue()
             let urlString = (document["url"] as? String) ?? ""
-            let url = URL.init(string: urlString) ?? URL.init(string: "http://www.google.com")!
+            let url = URL.init(string: urlString) ?? URL.init(string: "http://www.twitter.com")!
+            //TODO: Pull Image from a URL? Need another property on Tweet Document
             let avatar = UIImage.init(named:"twitter")!
             
             let tweet = Tweet.init(handle: handle, body: body, timestamp: date, url: url, avatar: avatar)
