@@ -11,7 +11,6 @@
 		3AB137352216983700A204BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB137342216983700A204BE /* GoogleService-Info.plist */; };
 		3AB137362216983700A204BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB137342216983700A204BE /* GoogleService-Info.plist */; };
 		3ADC0E92220B959700954A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0E91220B959700954A91 /* AppDelegate.swift */; };
-		3ADC0E94220B959700954A91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC0E93220B959700954A91 /* ViewController.swift */; };
 		3ADC0E97220B959700954A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC0E95220B959700954A91 /* Main.storyboard */; };
 		3ADC0E99220B959900954A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC0E98220B959900954A91 /* Assets.xcassets */; };
 		3ADC0E9C220B959900954A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC0E9A220B959900954A91 /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 		3AB137342216983700A204BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3ADC0E8E220B959700954A91 /* TweetLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADC0E91220B959700954A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3ADC0E93220B959700954A91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3ADC0E96220B959700954A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3ADC0E98220B959900954A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADC0E9B220B959900954A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +92,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AD7BB91221D4E74009DFB5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3ADC2CDC2210251D00382EDB /* Notification+.swift */,
+				3ADC2CEB221145B500382EDB /* UIView+.swift */,
+				3AB13732221694BE00A204BE /* Date+TimeAgo.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3AD7BB92221D4E84009DFB5C /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				3ADC0EE5220BA17500954A91 /* Tweet.swift */,
+				3ADC0EE3220B9F0E00954A91 /* TweetManager.swift */,
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
 		3ADC0E85220B959700954A91 = {
 			isa = PBXGroup;
 			children = (
@@ -117,19 +134,15 @@
 		3ADC0E90220B959700954A91 /* TweetLab */ = {
 			isa = PBXGroup;
 			children = (
+				3AD7BB92221D4E84009DFB5C /* Tweets */,
+				3AD7BB91221D4E74009DFB5C /* Helpers */,
 				3ADC2CE422102BAC00382EDB /* Views */,
 				3ADC0E91220B959700954A91 /* AppDelegate.swift */,
-				3ADC0E93220B959700954A91 /* ViewController.swift */,
 				3ADC0E95220B959700954A91 /* Main.storyboard */,
 				3ADC0E98220B959900954A91 /* Assets.xcassets */,
 				3ADC0E9A220B959900954A91 /* LaunchScreen.storyboard */,
 				3ADC0E9D220B959900954A91 /* Info.plist */,
 				3AB137342216983700A204BE /* GoogleService-Info.plist */,
-				3ADC0EE3220B9F0E00954A91 /* TweetManager.swift */,
-				3ADC0EE5220BA17500954A91 /* Tweet.swift */,
-				3ADC2CDC2210251D00382EDB /* Notification+.swift */,
-				3ADC2CEB221145B500382EDB /* UIView+.swift */,
-				3AB13732221694BE00A204BE /* Date+TimeAgo.swift */,
 			);
 			path = TweetLab;
 			sourceTree = "<group>";
@@ -353,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADC2CE622102CBF00382EDB /* TweetTileView.swift in Sources */,
-				3ADC0E94220B959700954A91 /* ViewController.swift in Sources */,
 				3ADC0E92220B959700954A91 /* AppDelegate.swift in Sources */,
 				3ADC0EE4220B9F0E00954A91 /* TweetManager.swift in Sources */,
 				3ADC2CEC221145B500382EDB /* UIView+.swift in Sources */,
