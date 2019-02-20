@@ -7,37 +7,59 @@
 //
 
 import UIKit
+import Firebase
 
-struct TweetManager {
-   let gameID:String
+class TweetManager {
+   let gameID:String = ""
    
    let numTweetsToShow = 10
    var tweets = [Tweet]()
-
-   mutating func refreshTweets() {
-      NotificationCenter.default.post(name: .tweetsWillLoad, object: nil)
-      //kick off firebase request
-      self.firebaseResponse()
+   
+   init() {
+      let db = Firestore.firestore()
+      db.collection("tweets").addSnapshotListener { (collectionSnapshot, error) in
+         if collectionSnapshot == nil {
+            print("Error fetching collection: \(error!)")
+            return
+         }
+         self.reloadTweets()
+      }
    }
    
-   mutating func firebaseResponse() {
-      //After receiving response, decode json into Tweet array
-      
-      var newTweets = [Tweet]()
-      //TEMP FAKE TWEETS
-      for i in 1...9 {
-         var date = Date()
-         date.addTimeInterval(TimeInterval(integerLiteral: Int64(-i*866)))
-         var tweet = Tweet.init(handle: "MattyAyOh", body: "TestTweet \(i)", timestamp: date, url: URL(string: "www.twitter.com")!, avatar:UIImage.init(named: "twitter")!)
+   func reloadTweets() {
+      NotificationCenter.default.post(name: .tweetsWillLoad, object: nil)
+      //kick off firebase request
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
+         let db = Firestore.firestore()
+         db.collection("tweets").getDocuments() { (querySnapshot, err) in
+            self.firebaseGotDocuments(querySnapshot: querySnapshot, err: err)
+         }
+      }
+   }
+   
+   func firebaseGotDocuments(querySnapshot:QuerySnapshot?, err:Error?) {
+      if let err = err {
+         print("Error getting documents: \(err)")
+      } else {
+         var newTweets = [Tweet]()
          
-         if i == 1 {
-            tweet = Tweet.init(handle: "supdood089", body: "When you're Steph Curry and shoot so many 3's 🔥🔥🔥 you forget how to dunk!", timestamp: date, url: URL(string: "www.twitter.com")!, avatar:UIImage.init(named: "twitter")!)
+         for document in querySnapshot!.documents {
+            print("\(document.documentID) => \(document.data())")
+            let data = document.data()
+            let handle = (data["handle"] as? String ) ?? ""
+            let body = (data["body"] as? String) ?? ""
+            let timestamp = document["timestamp"] as! Timestamp
+            let date = timestamp.dateValue()
+            let urlString = (document["url"] as? String) ?? ""
+            let url = URL.init(string: urlString) ?? URL.init(string: "http://www.google.com")!
+            let avatar = UIImage.init(named:"twitter")!
+            
+            let tweet = Tweet.init(handle: handle, body: body, timestamp: date, url: url, avatar: avatar)
+            newTweets.append(tweet)
          }
          
-         newTweets.append(tweet)
+         tweets = newTweets.sorted()
+         NotificationCenter.default.post(name: .tweetsDidLoad, object: nil)
       }
-      
-      tweets = newTweets.sorted()
-      NotificationCenter.default.post(name: .tweetsDidLoad, object: nil)
    }
 }
