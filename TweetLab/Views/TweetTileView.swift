@@ -58,9 +58,7 @@ class TweetTileView: UIView {
    }
    
    @objc func tileTapped(_ sender:UITapGestureRecognizer) {
-      //open browser with twitter url
-//      backingTweet.url
-      UIApplication.shared.open(URL(string: "http://www.google.com")!, options: [:], completionHandler: nil)
+      UIApplication.shared.open(backingTweet.url, options: [:], completionHandler: nil)
    }
 
 
