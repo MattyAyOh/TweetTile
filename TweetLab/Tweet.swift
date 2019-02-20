@@ -16,6 +16,6 @@ struct Tweet: Comparable {
    let avatar: UIImage
    
    static func < (lhs: Tweet, rhs: Tweet) -> Bool {
-      return lhs.timestamp < rhs.timestamp
+      return lhs.timestamp > rhs.timestamp
    }
 }
