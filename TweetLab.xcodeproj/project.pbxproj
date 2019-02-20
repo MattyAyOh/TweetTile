@@ -161,7 +161,6 @@
 				7CDDB9DBA19E84123977073D /* Pods-TweetLabTests.debug.xcconfig */,
 				B279BB6F02E6BA983CEE25FA /* Pods-TweetLabTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -534,6 +533,7 @@
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ao.TweetLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,6 +557,7 @@
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ao.TweetLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
