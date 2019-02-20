@@ -43,7 +43,7 @@
                         <constraint firstAttribute="height" constant="32" id="okR-WB-frf"/>
                     </constraints>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="When you're Steph Curry and shoot so many 3's 🔥🔥🔥 you forget how to dunk!" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjT-lG-kHW">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="When you're Steph Curry and shoot so many 3's 🔥🔥🔥 you forget how to dunk!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjT-lG-kHW">
                     <rect key="frame" x="30" y="57" width="340" height="126.5"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
